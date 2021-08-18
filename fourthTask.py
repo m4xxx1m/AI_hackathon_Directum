@@ -18,7 +18,7 @@ def fourth_task(path, input):
 
     doc = nlp(sentence)
     for ent in doc.ents:
-        print(ent.text, ent.start_char, ent.label_)
+        # print(ent.text, ent.start_char, ent.label_)
         if ent.label_ == "ORG":
             orgtok.append([ent.text, ent.start_char])
         if ent.label_ == "PER":
@@ -70,7 +70,7 @@ def fourth_task(path, input):
                  "offset": orgtok[i][1]}
         org["tokens"].append(token)
     for i in range(len(loctok)):
-        print('asddc')
+        # print('asddc')
         token = {"text": loctok[i][0],
                  "offset": loctok[i][1]}
         loc["tokens"].append(token)
